@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Register</title>
+     <style>
+        body{
+          background-image: url(https://images.pexels.com/photos/235985/pexels-photo-235985.jpeg);
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+
+                <form method="post">{% csrf_token %}
+                    <div class="mb-3">
+                      <label for="formGroupExampleInput" class="form-label">Name</label>
+                      <input type="text" class="form-control" id="formGroupExampleInput" name="name" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                      <label for="formGroupExampleInput2" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="formGroupExampleInput2" name="email" placeholder="Enter your Email">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleFormControlTextarea1" class="form-label">Address</label>
+                        <textarea type="text" class="form-control" id="exampleFormControlTextarea1" rows="3" name="address" placeholder="Enter your address"></textarea>
+                    </div>
+                    <div class="mb-3">
+                      <label for="formGroupExampleInput8" class="form-label">Pincode</label>
+                      <input type="text" class="form-control" id="formGroupExampleInput8" name="pincode" placeholder="Enter your pincode">
+                    </div>
+                    <div class="mb-3">
+                      <label for="formGroupExampleInput3" class="form-label">Phonenumber</label>
+                      <input type="text" class="form-control" id="formGroupExampleInput3" name="phonenumber" placeholder="Enter your phonenumber">
+                    </div>
+                     <div class="mb-3">
+                      <label for="formGroupExampleInput4" class="form-label">Birthday</label>
+                      <input type="Date" class="form-control" id="formGroupExampleInput4" name="birthday" placeholder="Birthday">
+                    </div>
+                    <div class="mb-3">
+                      <label for="formGroupExampleInput5" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="formGroupExampleInput5" name="password" placeholder="Password">
+                    </div>
+                    <div class="mb-3">
+                      <label for="formGroupExampleInput6" class="form-label">Confirm Password</label>
+                      <input type="password" class="form-control" id="formGroupExampleInput6" name="password1" placeholder="Confirm Passsword">
+                    </div>
+                    <div class="d-flex justify-content-center">
+                      <button type="submit"
+                        class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
+                    </div>
+
+                    <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="/customer_login/"
+                        class="fw-bold text-body"><u>Login here</u></a></p>
+
+
+
+
+                </form>
+            </div>
+          </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
